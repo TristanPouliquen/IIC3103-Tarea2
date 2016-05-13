@@ -44,7 +44,7 @@ class HomeController < ApplicationController
         'username' => post['user']['username'],
         'likes' => post['likes']['count'],
         'url' => getHighestQualityUrl(post['images']),
-        'caption' => post['caption']['text']
+        'caption' => post['caption'].has_key?('text') ? post['caption']['text'] : ""
       }
     end
 

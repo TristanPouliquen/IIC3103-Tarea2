@@ -56,13 +56,13 @@ class HomeControllerTest < ActionController::TestCase
     }
     test_tag_metadata = {'meta' => {'code' => 200},'data' => {'media_count' => 1, 'name' => 'cat'}}
     # Test data taken from Instagram API response
-    test_tag_recent_posts = {"pagination" =>  {
-      "next_max_tag_id": "AQDjkj8rsX9XNRvBox5-883VJHltMPaPw6An7sgMdfOvuO3IJpJCJxdsOT0Q3LhIXweMeoszfQxV6iukNaW_YRbSiUXeIaSK9Jdx5f39vBdZRBlmKkAY_9NVpM6RgHucanM",
-      "deprecation_warning": "next_max_id and min_id are deprecated for this endpoint; use min_tag_id and max_tag_id instead",
-      "next_max_id": "AQDjkj8rsX9XNRvBox5-883VJHltMPaPw6An7sgMdfOvuO3IJpJCJxdsOT0Q3LhIXweMeoszfQxV6iukNaW_YRbSiUXeIaSK9Jdx5f39vBdZRBlmKkAY_9NVpM6RgHucanM",
-      "next_min_id": "AQA3aKgugWd5NtGgLijOdeGkq2FLP-3M3E_9nhu3m198Or5iSN6lzGaiu3Sl0FIe5HurdD76-qZXdW13LbxBruxCR1uW_FRqMcnhhGnb08rYXITHBKyL7pBwP9QS1Ex4Mdw",
-      "min_tag_id": "AQA3aKgugWd5NtGgLijOdeGkq2FLP-3M3E_9nhu3m198Or5iSN6lzGaiu3Sl0FIe5HurdD76-qZXdW13LbxBruxCR1uW_FRqMcnhhGnb08rYXITHBKyL7pBwP9QS1Ex4Mdw",
-      "next_url": "https://api.instagram.com/v1/tags/cat/media/recent?access_token=2019746130.59a3f2b.86a0135240404ed5b908a14c0a2d9402&max_tag_id=AQDjkj8rsX9XNRvBox5-883VJHltMPaPw6An7sgMdfOvuO3IJpJCJxdsOT0Q3LhIXweMeoszfQxV6iukNaW_YRbSiUXeIaSK9Jdx5f39vBdZRBlmKkAY_9NVpM6RgHucanM"
+    test_tag_recent_posts = {"pagination" => {
+      "next_max_tag_id"=> "AQDjkj8rsX9XNRvBox5-883VJHltMPaPw6An7sgMdfOvuO3IJpJCJxdsOT0Q3LhIXweMeoszfQxV6iukNaW_YRbSiUXeIaSK9Jdx5f39vBdZRBlmKkAY_9NVpM6RgHucanM",
+      "deprecation_warning"=> "next_max_id and min_id are deprecated for this endpoint; use min_tag_id and max_tag_id instead",
+      "next_max_id"=> "AQDjkj8rsX9XNRvBox5-883VJHltMPaPw6An7sgMdfOvuO3IJpJCJxdsOT0Q3LhIXweMeoszfQxV6iukNaW_YRbSiUXeIaSK9Jdx5f39vBdZRBlmKkAY_9NVpM6RgHucanM",
+      "next_min_id"=> "AQA3aKgugWd5NtGgLijOdeGkq2FLP-3M3E_9nhu3m198Or5iSN6lzGaiu3Sl0FIe5HurdD76-qZXdW13LbxBruxCR1uW_FRqMcnhhGnb08rYXITHBKyL7pBwP9QS1Ex4Mdw",
+      "min_tag_id"=> "AQA3aKgugWd5NtGgLijOdeGkq2FLP-3M3E_9nhu3m198Or5iSN6lzGaiu3Sl0FIe5HurdD76-qZXdW13LbxBruxCR1uW_FRqMcnhhGnb08rYXITHBKyL7pBwP9QS1Ex4Mdw",
+      "next_url"=> "https://api.instagram.com/v1/tags/cat/media/recent?access_token=2019746130.59a3f2b.86a0135240404ed5b908a14c0a2d9402&max_tag_id=AQDjkj8rsX9XNRvBox5-883VJHltMPaPw6An7sgMdfOvuO3IJpJCJxdsOT0Q3LhIXweMeoszfQxV6iukNaW_YRbSiUXeIaSK9Jdx5f39vBdZRBlmKkAY_9NVpM6RgHucanM"
     },
     "meta" => {"code" => 200},
     "data" => [
