@@ -1,3 +1,5 @@
+notifications:
+  emails: false
 language: ruby
 cache: bundler
 rvm:
@@ -5,3 +7,4 @@ rvm:
 
 before_script:
   - cp config/database.yml.travis config/database.yml
+  - rake db:setup
