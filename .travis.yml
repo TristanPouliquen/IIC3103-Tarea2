@@ -2,3 +2,7 @@ language: ruby
 cache: bundler
 rvm:
   - 2.0
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - gem install mysql2 -v '0.4.4'

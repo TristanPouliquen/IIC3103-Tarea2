@@ -2,7 +2,7 @@ default: &default
   adapter: mysql2
   pool: 5
   timeout: 5000
-  user: root
+  user: travis
   password:
 
 development:
