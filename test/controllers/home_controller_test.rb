@@ -11,6 +11,19 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should return bad request error" do
+    post :searchTag, {'tag' => 'cat'}
+    assert_response :bad_request
+  end
+
+  test "should return empty JSON if get fails" do
+    controller = HomeController.new
+    uri = "http://www.google.com"
+    access_token = ''
+
+    assert_equal({}, controller.get(uri, access_token))
+  end
+
   test "should return json from instagram URL" do
     controller = HomeController.new
     uri = 'https://api.instagram.com/v1/tags/fsdgsdfdssd'
