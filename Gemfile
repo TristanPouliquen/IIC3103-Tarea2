@@ -43,4 +43,5 @@ end
 gem 'web-console', group: :development
 
 gem 'simplecov', :require => false, :group => :test
+gem "codeclimate-test-reporter", :require => false, group: :test
 
