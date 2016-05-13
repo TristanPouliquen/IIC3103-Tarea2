@@ -42,3 +42,5 @@ end
 # Access an IRB console on exception pages or by using <%= console %> in views
 gem 'web-console', group: :development
 
+gem 'simplecov', :require => false, :group => :test
+
