@@ -69,7 +69,7 @@ class HomeControllerTest < ActionController::TestCase
       {
         "attribution" => nil,
         "tags" => ["cat", "dog", "fight"],
-        "type": "image",
+        "type"=> "image",
         "location" => nil,
         "comments" => {
           "count" => 0,

@@ -6,13 +6,18 @@ class HomeController < ApplicationController
   end
 
   def searchTag
-    tag = params[:tag]
-    access_token = params[:access_token]
-    tag_metadata = get('https://api.instagram.com/v1/tags/' + tag, access_token)
-    tag_recent_posts = get('https://api.instagram.com/v1/tags/' + tag + '/media/recent', access_token)
+    tag = params.has_key?(:tag) ? params[:tag] : nil
+    access_token = params.has_key?(:access_token) ? params[:access_token] : nil
 
-    result = formatResponse(tag_metadata, tag_recent_posts)
-    render json: result, root: false
+    if tag.nil? or access_token.nil?
+      render json: {'error' => 'Missing parameter'}, root: false, status: :bad_request
+    else
+      tag_metadata = get('https://api.instagram.com/v1/tags/' + tag, access_token)
+      tag_recent_posts = get('https://api.instagram.com/v1/tags/' + tag + '/media/recent', access_token)
+
+      result = formatResponse(tag_metadata, tag_recent_posts)
+      render json: result, root: false
+    end
   end
 
   def get(uri, access_token)
