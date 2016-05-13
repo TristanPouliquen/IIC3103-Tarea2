@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root '/home' => 'home#index'
+  root 'home#index'
 end
