@@ -1,6 +1,6 @@
 {<img src="https://travis-ci.org/TristanPouliquen/IIC3103-Tarea2.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/TristanPouliquen/IIC3103-Tarea2]
 {<img src="https://codeclimate.com/github/TristanPouliquen/IIC3103-Tarea2/badges/gpa.svg" />}[https://codeclimate.com/github/TristanPouliquen/IIC3103-Tarea2]
-{<img src="https://codeclimate.com/github/TristanPouliquen/IIC3103-Tarea2/badges/coverage.svg" />}[https://codeclimate.com/github/TristanPouliquen/IIC3103-Tarea2/coverage]
+{<img src="https://codeclimate.com/repos/57365a6101a2341e9300201b/badges/0ad4c39ec6874967ab14/coverage.svg" />}[https://codeclimate.com/repos/57365a6101a2341e9300201b/coverage]
 
 == Tarea2
 
