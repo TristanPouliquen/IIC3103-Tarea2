@@ -45,9 +45,9 @@ class HomeController < ApplicationController
 
     tag_recent_posts['data'].each do |post|
       tags = post.has_key?('tags') ? post['tags'] : []
-      username = post.has_key?('user') and post['user'].has_key?('username') ? post['user']['username'] : ''
-      likes = post.has_key?('likes') and post['likes'].has_key?('count') ? post['likes']['count'] : 0
-      caption = post.has_key?('caption') and post['caption'].has_key?('text') ? post['caption']['text'] : ''
+      username = (post.has_key?('user') and post['user'].has_key?('username')) ? post['user']['username'] : ''
+      likes = (post.has_key?('likes') and post['likes'].has_key?('count')) ? post['likes']['count'] : 0
+      caption = (post.has_key?('caption') and post['caption'].has_key?('text')) ? post['caption']['text'] : ''
 
       result['posts'] << {
         'tags' => tags,
