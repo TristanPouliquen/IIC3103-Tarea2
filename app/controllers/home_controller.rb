@@ -44,12 +44,17 @@ class HomeController < ApplicationController
     result['metadata'] = {'total' => count}
 
     tag_recent_posts['data'].each do |post|
+      tags = post.has_key?('tags') ? post['tags'] : []
+      username = post.has_key?('user') and post['user'].has_key?('username') ? post['user']['username'] : ''
+      likes = post.has_key?('likes') and post['likes'].has_key?('count') ? post['likes']['count'] : 0
+      caption = post.has_key?('caption') and post['caption'].has_key?('text') ? post['caption']['text'] : ''
+
       result['posts'] << {
-        'tags' => post['tags'],
-        'username' => post['user']['username'],
-        'likes' => post['likes']['count'],
+        'tags' => tags,
+        'username' => username,
+        'likes' => likes,
         'url' => getHighestQualityUrl(post['images']),
-        'caption' => post['caption'].has_key?('text') ? post['caption']['text'] : ""
+        'caption' => caption
       }
     end
 
